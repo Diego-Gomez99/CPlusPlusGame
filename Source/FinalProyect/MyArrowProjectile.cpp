@@ -38,11 +38,3 @@ void AMyArrowProjectile::BeginPlay()
 	FVector AddForce = SpawnDirection * Force;
 	ProjectileMesh->AddForce(AddForce);
 }
-
-// Called every frame
-void AMyArrowProjectile::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-}
-
-
