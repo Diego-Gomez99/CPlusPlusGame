@@ -43,7 +43,9 @@ AMycharacterCPlusPlus::AMycharacterCPlusPlus()
 	BowMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("BowMesh"));
 	BowMesh->SetupAttachment(GetMesh());
 
-
+	//Setting Player Health
+	Health = 100;
+	
 	//Setting Pitchs
 	PitchMax = 30.0f;
 	PitchMin = -PitchMax;
@@ -53,7 +55,6 @@ AMycharacterCPlusPlus::AMycharacterCPlusPlus()
 void AMycharacterCPlusPlus::BeginPlay()
 {
 	Super::BeginPlay();
-
 
 	if (CogMesh && SwordMesh && BowMesh && ArrowMesh)  // If CogMesh exist
 	{

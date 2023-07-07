@@ -53,20 +53,23 @@ public:
 
 private:
 
-	//Setting Delay Variable
+	//Handle// Controls animations workflow 
+	//======//
 	FTimerHandle Delay;
 
 	//Setting Player Controller
 	APlayerController* MyPlayerController;
+
 
 	// Setting the SpeedMovement  
 	UPROPERTY(EditAnywhere, Category = "Speed")
 		float SpeedMovement = 600.0f;
 
 	
-	//Movement Component
+	//Components//
+	//====//
 	UCharacterMovementComponent* MovementComponent;
-	// Spring Arm Component
+	
 	USpringArmComponent* SpringArm;
 	//Animation Montage
 	UAnimMontage* AMontage;
@@ -76,6 +79,8 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Character Options")
 	UStaticMeshComponent* CogMesh;
 	
+
+	int Health;
 	
 	//Getting AnimDelays
 	float AnimDelay;
@@ -83,8 +88,8 @@ private:
 	//Disable/EnableInput boolean
 	bool CanEnableInput;
 
-	//Vectors 
-	FVector CameraDirection;
+
+	FVector CameraDirection; //Camera Direction to 
 
 	//Get Axis Inputs
 	void MoveForward(float Value);
@@ -98,7 +103,8 @@ private:
 	//ShootCenterOfScreen
 	void ShootArrow();
 
-	//Get Actions Inputs
+	//Void Actions Inputs// Functions to work with all the players inputs  
+	//====//   
 	void Jump();
 	void WalkSlowPressed();
 	void WalkSlowReleased();

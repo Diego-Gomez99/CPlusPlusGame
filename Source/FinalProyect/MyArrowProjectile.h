@@ -23,7 +23,7 @@ protected:
 private:
 
 	//Creating MeshProjectile and the Force variable.
-	UPROPERTY(EditAnywhere)
 		UStaticMeshComponent* ProjectileMesh;
 		float Force;
+
 };

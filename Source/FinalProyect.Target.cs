@@ -9,6 +9,8 @@ public class FinalProyectTarget : TargetRules
 	{
 		Type = TargetType.Game;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
+		bUseUnityBuild = false;
+        bUsePCHFiles = true;
 
 		ExtraModuleNames.AddRange( new string[] { "FinalProyect" } );
 	}

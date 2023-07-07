@@ -30,7 +30,6 @@ AMyArrowProjectile::AMyArrowProjectile()
 void AMyArrowProjectile::BeginPlay()
 {
 	Super::BeginPlay();
-
 	Force = 400000.0f;
 	UWorld* World = GetWorld();
 	if (World == nullptr) return;
@@ -38,3 +37,4 @@ void AMyArrowProjectile::BeginPlay()
 	FVector AddForce = SpawnDirection * Force;
 	ProjectileMesh->AddForce(AddForce);
 }
+
